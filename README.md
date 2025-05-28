@@ -23,9 +23,9 @@ Dos modelos treinados nesses dados, 2 deles acabaram se destacando perante os de
 Outro cuidado que tivemos durante o projeto foi trabalhar com a coluna alvo desbalanceada (pois funcionários que positivos para o Attrition, isto é, que deixaram a empresa são minoria). Para isso, foi adotado 3 estratégias:
   - Usado parametros como "class_weight=balanced" em alguns modelos e scale_pos_weight para modelos de árvore de decisão - está presente no arquivo "02.1_Modelos_Class_Weight_Balanced.ipynb"
   - Usado o método RandomUnderSampler, que equilibra a variável target reduzindo aleatoriamente o numero de amostras da classe majoritária - está presente no arquivo "02.2_Modelos_Balanceamento_RandomUnderSampler.ipynb"
-  - Por fim, foi usado o método RandomOverSampler, que equilibra a variável target aumentando aleatoriamente o numero de amostras da classe minoritária - está presente no arquivo "02.2_Modelos_Balanceamento_RandomOvererSampler.ipynb".
+  - Por fim, foi usado o método RandomOverSampler, que equilibra a variável target aumentando aleatoriamente o numero de amostras da classe minoritária - está presente no arquivo "02.3_Modelos_Balanceamento_RandomOverSampler.ipynb".
 
-Dos 3 notebooks acima aquele cujo resultado foi o melhor foi o notebook "02.2_Modelos_Balanceamento_RandomOvererSampler.ipynb" em que foi usado o método RandomOverSampler para balancear os dados do target.
+**Dos 3 notebooks acima aquele que apresentou os melhores resultdos foi o **"02.3_Modelos_Balanceamento_RandomOverSampler.ipynb". e é o notebook principal deste projeto.**
 
 Uma vez escolhido e otimizado o modelo de Regressão Logística tentei identificar quais features teriam maior relevância da determinação do Atrito, com o auxílio dos coeficientes da regressão logística para cada feature. Foi adotado o conceito de Log-Odds com o objetivo de transformar os coeficientes de cada feature na probabilidade que cada feature tem em influenciar o target (Atrito de cada funcionário). Isso pode ser observado na imagem "Variacao_probabilidade_attrition.png" da pasta "relatorios".
 
@@ -50,7 +50,7 @@ A partir dessa imagem é sugerido um plano de ação para que a empresa possa en
 
 Com o projeto citado acima foi exportado o melhor modelo obtido, e criado uma página do streamlit com arquivo "home_streamlit.py", para que seja possível fornecer as informações de cada funcionário e o modelo calcular a probabilidade do funcionário sair da empresa, permitindo simulações que possam ser úteis para a empresa. 
 
-Esse arquivo usado no streamlit usa o modelo de classificação exportado através do notebook "02.2_Modelos_Balanceamento_RandomOvererSampler.ipynb".
+Esse arquivo usado no streamlit usa o modelo de classificação exportado através do notebook "02.3_Modelos_Balanceamento_RandomOverSampler.ipynb" no arquivo "logistic_regression_ros.joblib" da pasta "modelos".
 
 
 # Organização de pastas e arquivos do projeto
