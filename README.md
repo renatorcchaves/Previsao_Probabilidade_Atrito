@@ -4,13 +4,13 @@ O dataset a ser utilizado é o *IBM HR Analytics Employee Attrition & Performanc
 
 [Link do Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/data)
 
-# Conceito de Atrito
+## Conceito de Atrito
 
 Os termos *attrition* ("atrito") e *turnover* ("rotatividade") são frequentemente usados de forma intercambiável no contexto de recursos humanos e gestão de força de trabalho, mas eles se referem a conceitos ligeiramente diferentes.
 
 Atrito refere-se à redução gradual de empregados por meio de circunstâncias naturais, como aposentadoria, demissão voluntária por motivos pessoais, ou a decisão de não substituir empregados que estão de saída. 
 
-# Considerações sobre o projeto - Linha de Raciocínio
+## Considerações sobre o projeto - Linha de Raciocínio
 
 Primeiramente foi feito a análise exploratória da base original para entender as features compostas na base, fazendo também um tratamento inicial dos dados. Buscamos entender também como funcionava a distribuição dos dados de cada feature numérica do modelo, bem como a presença de outliers para cada feature, e como cada feature se comportava nas 2 situações alvo do projeto (funcionários que saíram da empresa e que não saíram conforme dados da coluna Attrition). Além disso, analisamos as correlações existentes entre as features do modelo, exportando a base de dados tratada para ser usada nos notebooks em que foi criado os modelos de machine learning. 
 
@@ -31,7 +31,9 @@ Uma vez escolhido e otimizado o modelo de Regressão Logística tentei identific
 
 A partir dessa imagem é sugerido um plano de ação para que a empresa possa entender os motivos que levam ao atrito e tomar ações para evitar isso.
 
-# Plano de Ação
+![Features_Relacionadas_Atrito](relatorios/Variacao_probabilidade_attrition.png)
+
+## Plano de Ação
 
 - Avaliar os motivos que levam os funcionários a fazerem hora extra que podem influenciar no Attrition
     - Mão de obra insuficiente
@@ -44,30 +46,31 @@ A partir dessa imagem é sugerido um plano de ação para que a empresa possa en
 - Como a renda mensal de cada setor em nível da empresa se compara ao mercado?
 - Quais as ações a empresa pode promover para aumentar o envolvimento e a satisfação do funcionários? Principalmente nos departamentos com maior probabilidade de Attrition?
 
-# Simular Probabilidade de Atrito - Streamlit
+## Simular Probabilidade de Atrito - Streamlit
 
 Com o projeto citado acima foi exportado o melhor modelo obtido, e criado uma página do streamlit com arquivo "home_streamlit.py", para que seja possível fornecer as informações de cada funcionário e o modelo calcular a probabilidade do funcionário sair da empresa, permitindo simulações que possam ser úteis para a empresa. 
 
 Esse arquivo usado no streamlit usa o modelo de classificação exportado através do notebook "02.2_Modelos_Balanceamento_RandomOvererSampler.ipynb".
 
-## Organização de pastas e arquivos do projeto (REVISAR REVISAR REVISAR REVISAR REVISAR REVISAR)
+
+# Organização de pastas e arquivos do projeto
+
+├── dados              <- Arquivos de dados originais e tratados para o projeto.
+
+├── modelos            <- Modelos treinados, otimizado e extraído do projeto.
+
+├── notebooks          <- Cadernos Jupyter onde foi desenvolvido o projeto de previsão de atrito
+
+|   └──src             <- Código-fonte para uso neste projeto.
+      
+       └── __init__.py  <- Torna um módulo Python
+       └── config.py    <- Configurações básicas do projeto e fórmulas úteis para os notebooks acima
+       └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+
+├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
+
+├── relatorios         <- Análises geradas em HTML, PDF, Imagens, etc.
 
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
+
 ├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
-├── README.md          <- README principal para desenvolvedores que usam este projeto.
-|
-├── dados              <- Arquivos de dados para o projeto.
-|
-├── modelos            <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
-|
-├── notebooks          <- Cadernos Jupyter onde foi desenvolvido o projeto de previsão
-│
-|   └──src             <- Código-fonte para uso neste projeto.
-|      │
-|      ├── __init__.py  <- Torna um módulo Python
-|      ├── config.py    <- Configurações básicas do projeto e fórmulas úteis para os notebooks acima
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
-|
-├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
-|
-├── relatorios         <- Análises geradas em HTML, PDF, Imagens, etc.
