@@ -63,9 +63,13 @@ Esse arquivo usado no streamlit usa o modelo de classificação exportado atrav�
 
 |   └──src             <- Código-fonte para uso neste projeto.
       
-       └── __init__.py  <- Torna um módulo Python
-       └── config.py    <- Configurações básicas do projeto e fórmulas úteis para os notebooks acima
-       └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+       └── __init__.py         <- Torna um módulo Python os arquivos abaixo
+       └── config.py           <- Definido caminho onde os principais arquivos do projeto estão salvos
+       └── graficos.py         <- Scripts para criar visualizações gráficas e orientadas a resultados dos modelos
+       └── models.py           <- Scripts com fórmulas para criação, treino, e verificação dos resultados dos modelos 
+       └── models_rus.py       <- Scripts com fórmulas para criação, treino, e verificação dos resultados dos modelos incluindo etapa de RandomUnderSampler
+       └── models_imlearn.py   <- Scripts com fórmulas para criação, treino, e verificação dos resultados dos modelos incluindo etapa de balanceamento genérico do target
+       └── auxiliares.py       <- Scripts para criar dataframe dos coeficientes do modelo escolhido
 
 ├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
 
