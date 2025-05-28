@@ -20,7 +20,7 @@ A métrica escolhida definir o melhor modelo foi a average_precision, que nada m
 
 Dos modelos treinados nesses dados, 2 deles acabaram se destacando perante os demais, sendo o modelo de Regressão Logística e o SVC (Support Vector Classifier). Optamos em buscar a otimização dos parâmetros do modelo de Regressão Logística e na grade de parametros (param_grid) foram incluídos parametros que seriam responsáveis pela regularização dos dados (penalty, l1_ratio, C).
 
-Outro cuidado que tivemos durante o projeto foi trabalhar com a coluna alvo desbalanceada (pois funcionários que positivos para o Attrition, isto é, que deixaram a empresa são minoria). Para isso, foi adotado 3 estratégias:
+Outro cuidado que tivemos durante o projeto foi trabalhar com a coluna alvo desbalanceada (pois funcionários que foram positivos para o Attrition, isto é, que deixaram a empresa são minoria). Para isso, foi adotado 3 estratégias:
   - Usado parametros como "class_weight=balanced" em alguns modelos e scale_pos_weight para modelos de árvore de decisão - está presente no arquivo "02.1_Modelos_Class_Weight_Balanced.ipynb"
   - Usado o método RandomUnderSampler, que equilibra a variável target reduzindo aleatoriamente o numero de amostras da classe majoritária - está presente no arquivo "02.2_Modelos_Balanceamento_RandomUnderSampler.ipynb"
   - Por fim, foi usado o método RandomOverSampler, que equilibra a variável target aumentando aleatoriamente o numero de amostras da classe minoritária - está presente no arquivo "02.3_Modelos_Balanceamento_RandomOverSampler.ipynb".
