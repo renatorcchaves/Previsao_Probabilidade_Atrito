@@ -25,7 +25,7 @@ Outro cuidado que tivemos durante o projeto foi trabalhar com a coluna alvo desb
   - Usado o método RandomUnderSampler, que equilibra a variável target reduzindo aleatoriamente o numero de amostras da classe majoritária - está presente no arquivo "02.2_Modelos_Balanceamento_RandomUnderSampler.ipynb"
   - Por fim, foi usado o método RandomOverSampler, que equilibra a variável target aumentando aleatoriamente o numero de amostras da classe minoritária - está presente no arquivo "02.3_Modelos_Balanceamento_RandomOverSampler.ipynb".
 
-**Dos 3 notebooks acima aquele que apresentou os melhores resultdos foi o **"02.3_Modelos_Balanceamento_RandomOverSampler.ipynb". e é o notebook principal deste projeto.**
+**Dos 3 notebooks acima aquele que apresentou os melhores resultdos foi o "02.3_Modelos_Balanceamento_RandomOverSampler.ipynb". e é o notebook principal deste projeto.**
 
 Uma vez escolhido e otimizado o modelo de Regressão Logística tentei identificar quais features teriam maior relevância da determinação do Atrito, com o auxílio dos coeficientes da regressão logística para cada feature. Foi adotado o conceito de Log-Odds com o objetivo de transformar os coeficientes de cada feature na probabilidade que cada feature tem em influenciar o target (Atrito de cada funcionário). Isso pode ser observado na imagem "Variacao_probabilidade_attrition.png" da pasta "relatorios".
 
